@@ -68,7 +68,7 @@ public class HelloController {
 	}
 
 
-	@GetMapping(path = "/hello/{personName}")
+	@PostMapping(path = "/hello/{personName}")
 	public String hello (@PathVariable String personName, Model model){
 		model.addAttribute ("name", personName);
 		return "hello";

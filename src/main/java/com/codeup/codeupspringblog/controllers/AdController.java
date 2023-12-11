@@ -3,9 +3,7 @@ package com.codeup.codeupspringblog.controllers;
 import com.codeup.codeupspringblog.models.Ad;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,12 +29,12 @@ public class AdController {
 		return "/ads/create";
 	}
 
-	@GetMapping ("/create")
+	@PostMapping("/create")
 	public String doCreate(@RequestParam(name="title") String title,
 						   @RequestParam(name = "description") String description ){
 		Ad ad = new Ad(title,description);
 		ads.add(ad);
-		return "redirect:/ads";
+		return "redirect:/ads/";
 	}
 
 }
