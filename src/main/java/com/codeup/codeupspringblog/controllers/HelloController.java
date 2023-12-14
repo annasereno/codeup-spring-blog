@@ -41,12 +41,12 @@ public class HelloController {
 //				""";
 //	}
 
-	@GetMapping(path = "/hello/{personName}")
-	@ResponseBody //whatever the method returns will be sent as the body
-
-	public String hello(@PathVariable String personName) {
-		return "Hello " + personName ;
-	}
+//	@GetMapping(path = "/hello/{personName}")
+//	@ResponseBody //whatever the method returns will be sent as the body
+//
+//	public String hello(@PathVariable String personName) {
+//		return "Hello " + personName ;
+//	}
 
 	//    @GetMapping(path = "/hello-msg", produces = "application/json")
 //    @ResponseBody

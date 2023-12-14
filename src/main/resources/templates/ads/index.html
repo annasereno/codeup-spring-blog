@@ -10,8 +10,9 @@
 <header th:include="~{partials/partials :: header}"></header>
 
 <div th:each="ad : ${ads}">
-	<h2 th:text="${ad.title}"></h2>
+	<h2><a th:href="@{|/ads/${ad.id}|}">[[${ad.title}]]</a></h2>
 	<p th:text="${ad.description}"></p>
+	<p th:text="${ad.user.username}"></p>
 </div>
 
 </body>
